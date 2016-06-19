@@ -13,24 +13,40 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <FrameLayout
-                android:id="@+id/photo_container"
+            <com.example.xyzreader.ui.MaxWidthLinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/photo_placeholder">
-                <!--suppress AndroidLintContentDescription -->
-                <ImageView
-                    android:id="@+id/photo"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                     />
+                android:layout_height="@dimen/detail_card_top_margin"
+                android:layout_gravity="center_horizontal"
+                android:maxWidth="@dimen/detail_card_max_width">
 
-                <View
+                <FrameLayout
+                    android:id="@+id/photo_container"
                     android:layout_width="match_parent"
-                    android:layout_height="112dp"
-                    android:background="@drawable/photo_background_protection" />
+                    android:layout_height="match_parent"
+                    android:background="@color/photo_placeholder">
 
-            </FrameLayout>
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxWidth="@dimen/detail_card_max_width"
+                        android:minWidth="@dimen/detail_card_max_width"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center"
+                        />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="112dp"
+                        android:background="@drawable/photo_background_protection"
+                        android:elevation="8dp"
+                        />
+
+                </FrameLayout>
+
+            </com.example.xyzreader.ui.MaxWidthLinearLayout>
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
                 android:orientation="vertical"
@@ -39,7 +55,6 @@
                 android:layout_gravity="center_horizontal"
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:background="#fff"
-                android:elevation="2dp"
                 android:layout_marginTop="@dimen/detail_card_top_margin">
 
                 <LinearLayout

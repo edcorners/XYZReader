@@ -1,5 +1,6 @@
 package com.example.xyzreader.ui;
 
+import android.app.Activity;
 import android.app.LoaderManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,6 +9,7 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -99,7 +101,7 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     @Override
     public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        Adapter adapter = new Adapter(cursor);
+        Adapter adapter = new Adapter(this, cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
         int columnCount = getResources().getInteger(R.integer.list_column_count);
@@ -115,9 +117,11 @@ public class ArticleListActivity extends AppCompatActivity implements
 
     private class Adapter extends RecyclerView.Adapter<ViewHolder> {
         private Cursor mCursor;
+        private Activity mActivity;
 
-        public Adapter(Cursor cursor) {
+        public Adapter(Activity activity, Cursor cursor) {
             mCursor = cursor;
+            mActivity = activity;
         }
 
         @Override
@@ -130,11 +134,17 @@ public class ArticleListActivity extends AppCompatActivity implements
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
             final ViewHolder vh = new ViewHolder(view);
+            String transitionName = getString(R.string.transition_photo);
+            final ActivityOptionsCompat options =
+                    ActivityOptionsCompat.makeSceneTransitionAnimation( mActivity,
+                            vh.itemView,
+                            transitionName
+                    );
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))),options.toBundle());
                 }
             });
             return vh;

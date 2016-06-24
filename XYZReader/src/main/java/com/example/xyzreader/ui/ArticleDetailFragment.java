@@ -185,7 +185,7 @@ public class ArticleDetailFragment extends Fragment implements
         TextView titleView = (TextView) mRootView.findViewById(R.id.article_title);
         TextView bylineView = (TextView) mRootView.findViewById(R.id.article_byline);
         bylineView.setMovementMethod(new LinkMovementMethod());
-        TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
+        final TextView bodyView = (TextView) mRootView.findViewById(R.id.article_body);
         bodyView.setTypeface(Typeface.createFromAsset(getResources().getAssets(), "Rosario-Regular.ttf"));
 
         if (mCursor != null) {
@@ -217,9 +217,8 @@ public class ArticleDetailFragment extends Fragment implements
                                     mRootView.findViewById(R.id.share_fab).setBackgroundTintList(ColorStateList.valueOf(mMutedColor));
 
                                     Window window = getActivity().getWindow();
-                                    window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-                                    window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
                                     window.setStatusBarColor(mMutedColor);
+                                    bodyView.setLinkTextColor(mMutedColor);
                                 }
 
                                 updateStatusBar();

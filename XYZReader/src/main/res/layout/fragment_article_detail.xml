@@ -13,6 +13,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="@drawable/photo_background_protection"
+                android:elevation="2dp"
+                />
+
             <com.example.xyzreader.ui.MaxWidthLinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -38,13 +45,6 @@
                         android:transitionName="@string/transition_photo"
                         />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="112dp"
-                        android:background="@drawable/photo_background_protection"
-                        android:elevation="8dp"
-                        />
-
                 </FrameLayout>
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:maxWidth="@dimen/detail_card_max_width"
-                android:background="#fff"
+                android:background="@color/theme_text_icons"
                 android:layout_marginTop="@dimen/detail_card_top_margin">
 
                 <LinearLayout
@@ -78,7 +78,7 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"
                         android:fontFamily="sans-serif-condensed"
-                        android:textColor="#fff"
+                        android:textColor="@color/theme_text_icons"
                         android:textStyle="bold"
                         android:textSize="@dimen/detail_title_text_size"
                         android:lineSpacingMultiplier="0.9" />

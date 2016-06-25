@@ -2,10 +2,10 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="4dp"
+    android:layout_marginBottom="1dp"
     android:layout_marginLeft="4dp"
     android:layout_marginRight="4dp"
-    android:layout_marginTop="4dp"
+    android:layout_marginTop="1dp"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?selectableItemBackground"
@@ -14,22 +14,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.RoundedNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:scaleType="centerCrop"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
             android:layout_margin="8dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_vertical">
 
             <TextView
                 android:id="@+id/article_title"
@@ -39,7 +39,7 @@
                 android:ellipsize="end"
                 android:maxLines="4"
                 android:paddingBottom="4dp"
-                android:paddingLeft="16dp"
+                android:paddingLeft="8dp"
                 android:paddingRight="16dp"
                 android:paddingTop="2dp"
                 android:textColor="@color/theme_primary_text" />
@@ -52,7 +52,7 @@
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:paddingBottom="16dp"
-                android:paddingLeft="16dp"
+                android:paddingLeft="8dp"
                 android:paddingRight="16dp"
                 android:singleLine="true"
                 android:textColor="@color/theme_secondary_text" />

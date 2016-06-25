@@ -33,7 +33,7 @@
                 android:id="@+id/article_title"
                 style="@style/TextAppearance.AppCompat.Subhead"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:ellipsize="end"
                 android:maxLines="2"
                 android:paddingBottom="4dp"

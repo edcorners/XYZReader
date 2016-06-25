@@ -2,28 +2,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="1dp"
-    android:layout_marginLeft="4dp"
-    android:layout_marginRight="4dp"
-    android:layout_marginTop="1dp"
-    android:clickable="true"
+    android:layout_margin="@dimen/card_margin"
     android:focusable="true"
-    android:foreground="?selectableItemBackground"
-    android:transitionName="@string/transition_photo">
+    android:foreground="?selectableItemBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <!--suppress AndroidLintContentDescription -->
-        <com.example.xyzreader.ui.RoundedNetworkImageView
+        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:background="@color/photo_placeholder"
             android:scaleType="centerCrop"
             android:layout_gravity="center_vertical"
-            android:layout_margin="8dp" />
+            android:layout_margin="10dp"
+            android:transitionName="@string/transition_photo"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,11 +35,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-                android:maxLines="4"
+                android:maxLines="2"
                 android:paddingBottom="4dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="16dp"
-                android:paddingTop="2dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="10dp"
+                android:paddingTop="8dp"
                 android:textColor="@color/theme_primary_text" />
 
             <TextView
@@ -51,9 +49,9 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:paddingBottom="16dp"
-                android:paddingLeft="8dp"
-                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="10dp"
                 android:singleLine="true"
                 android:textColor="@color/theme_secondary_text" />
         </LinearLayout>

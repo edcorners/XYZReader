@@ -13,41 +13,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="112dp"
-                android:background="@drawable/photo_background_protection"
-                android:elevation="2dp"
-                />
-
-            <com.example.xyzreader.ui.MaxWidthLinearLayout
-                android:orientation="vertical"
+            <FrameLayout
+                android:id="@+id/photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/detail_card_top_margin"
-                android:layout_gravity="center_horizontal"
-                android:maxWidth="@dimen/detail_card_max_width">
+                android:background="@color/photo_placeholder">
 
-                <FrameLayout
-                    android:id="@+id/photo_container"
+                <ImageView
+                    android:id="@+id/photo"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/photo_placeholder">
+                    android:layout_height="@dimen/detail_card_top_margin"
+                    android:maxWidth="@dimen/detail_card_max_width"
+                    android:minWidth="@dimen/detail_card_max_width"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:layout_gravity="center"
+                    android:transitionName="@string/transition_photo"
+                    />
 
-                    <ImageView
-                        android:id="@+id/photo"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:maxWidth="@dimen/detail_card_max_width"
-                        android:minWidth="@dimen/detail_card_max_width"
-                        android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
-                        android:layout_gravity="center"
-                        android:transitionName="@string/transition_photo"
-                        />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:background="@drawable/photo_background_protection"
+                    android:elevation="6dp"
+                    />
 
-                </FrameLayout>
-
-            </com.example.xyzreader.ui.MaxWidthLinearLayout>
+            </FrameLayout>
 
             <com.example.xyzreader.ui.MaxWidthLinearLayout
                 android:orientation="vertical"

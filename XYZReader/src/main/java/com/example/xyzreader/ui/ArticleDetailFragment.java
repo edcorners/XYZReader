@@ -257,7 +257,9 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         bindViews();
-        getActivity().startPostponedEnterTransition();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getActivity().startPostponedEnterTransition();
+        }
     }
 
     @Override

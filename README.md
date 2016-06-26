@@ -1,6 +1,7 @@
 # XYZ Reader
 
-XYZ Reader is a mock RSS feed reader featuring banner photos and shocking headlines!
+XYZ Reader is a mock RSS feed reader featuring banner photos and shocking headlines!.
+Implements material design; Collapsible bar, AppCompat themes, View elevation, Transitions, Image display, Appropriate typography.
 
 ## Context
 

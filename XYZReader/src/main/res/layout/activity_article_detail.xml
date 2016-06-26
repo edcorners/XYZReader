@@ -21,6 +21,7 @@
             android:layout_height="?actionBarSize"
             android:background="?selectableItemBackgroundBorderless"
             android:contentDescription="@string/up"
+            android:elevation="2dp"
             android:src="@drawable/ic_arrow_back" />
 
     </FrameLayout>

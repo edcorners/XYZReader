@@ -11,7 +11,6 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
-import android.nfc.Tag;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
@@ -143,7 +142,6 @@ public class ArticleDetailFragment extends Fragment implements
             }
         });
 
-
         bindViews();
         updateStatusBar();
         return mRootView;
@@ -259,6 +257,7 @@ public class ArticleDetailFragment extends Fragment implements
         }
 
         bindViews();
+        getActivity().startPostponedEnterTransition();
     }
 
     @Override

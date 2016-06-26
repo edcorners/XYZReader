@@ -28,7 +28,6 @@
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
                     android:layout_gravity="center"
-                    android:transitionName="@string/transition_photo"
                     />
 
                 <View

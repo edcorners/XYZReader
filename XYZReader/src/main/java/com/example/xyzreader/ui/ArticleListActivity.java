@@ -11,14 +11,11 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
-import android.util.TypedValue;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -134,17 +131,13 @@ public class ArticleListActivity extends AppCompatActivity implements
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = getLayoutInflater().inflate(R.layout.list_item_article, parent, false);
             final ViewHolder vh = new ViewHolder(view);
-            String transitionName = getString(R.string.transition_photo);
-            final ActivityOptionsCompat options =
-                    ActivityOptionsCompat.makeSceneTransitionAnimation( mActivity,
-                            vh.itemView,
-                            transitionName
-                    );
+
             view.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
-                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))),options.toBundle());
+                            ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))),
+                            ActivityOptionsCompat.makeSceneTransitionAnimation(ArticleListActivity.this).toBundle());
                 }
             });
             return vh;

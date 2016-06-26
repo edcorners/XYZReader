@@ -22,7 +22,7 @@
                 <ImageView
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:maxWidth="@dimen/detail_card_max_width"
                     android:minWidth="@dimen/detail_card_max_width"
                     android:adjustViewBounds="true"

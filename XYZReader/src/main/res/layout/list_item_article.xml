@@ -36,11 +36,13 @@
                 android:layout_height="match_parent"
                 android:ellipsize="end"
                 android:maxLines="2"
-                android:paddingBottom="4dp"
-                android:paddingLeft="0dp"
-                android:paddingRight="10dp"
-                android:paddingTop="8dp"
-                android:textColor="@color/theme_primary_text" />
+                android:paddingBottom="@dimen/article_title_padding_bottom"
+                android:paddingStart="@dimen/article_title_padding_start"
+                android:paddingEnd="@dimen/article_title_padding_end"
+                android:paddingTop="@dimen/article_title_padding_top"
+                android:textColor="@color/theme_primary_text"
+                android:paddingLeft="@dimen/article_title_padding_start"
+                android:paddingRight="@dimen/article_title_padding_end" />
 
             <TextView
                 android:id="@+id/article_subtitle"
@@ -49,11 +51,14 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:paddingBottom="8dp"
-                android:paddingLeft="0dp"
-                android:paddingRight="10dp"
+                android:paddingBottom="@dimen/article_subtitle_padding_bottom"
+                android:paddingStart="@dimen/article_subtitle_padding_start"
+                android:paddingEnd="@dimen/article_subtitle_padding_end"
+                android:paddingTop="@dimen/article_subtitle_padding_top"
                 android:singleLine="true"
-                android:textColor="@color/theme_secondary_text" />
+                android:textColor="@color/theme_secondary_text"
+                android:paddingLeft="@dimen/article_subtitle_padding_start"
+                android:paddingRight="@dimen/article_subtitle_padding_end" />
         </LinearLayout>
     </LinearLayout>
 

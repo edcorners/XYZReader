@@ -9,5 +9,15 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="card_margin">0dp</dimen>
+    <dimen name="article_title_padding_top">8dp</dimen>
+    <dimen name="article_title_padding_bottom">4dp</dimen>
+    <dimen name="article_title_padding_start">0dp</dimen>
+    <dimen name="article_title_padding_end">10dp</dimen>
+
+    <dimen name="article_subtitle_padding_top">0dp</dimen>
+    <dimen name="article_subtitle_padding_bottom">8dp</dimen>
+    <dimen name="article_subtitle_padding_start">0dp</dimen>
+    <dimen name="article_subtitle_padding_end">10dp</dimen>
+
 
 </resources>

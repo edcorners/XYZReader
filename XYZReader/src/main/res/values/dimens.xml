@@ -18,6 +18,7 @@
     <dimen name="article_subtitle_padding_bottom">8dp</dimen>
     <dimen name="article_subtitle_padding_start">0dp</dimen>
     <dimen name="article_subtitle_padding_end">10dp</dimen>
+    <dimen name="thumbnail_margin">10dp</dimen>
 
 
 </resources>

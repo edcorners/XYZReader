@@ -16,12 +16,12 @@
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:background="@color/photo_placeholder"
             android:scaleType="centerCrop"
             android:layout_gravity="center_vertical"
-            android:layout_margin="10dp"/>
+            android:layout_margin="@dimen/thumbnail_margin"/>
 
         <LinearLayout
             android:layout_width="match_parent"

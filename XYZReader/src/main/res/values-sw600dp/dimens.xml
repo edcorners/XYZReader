@@ -6,4 +6,7 @@
     <dimen name="fab_margin">24dp</dimen>
 
     <dimen name="card_margin">4dp</dimen>
+    <dimen name="thumbnail_margin">2dp</dimen>
+    <dimen name="thumbnail_width">140dp</dimen>
+    <dimen name="thumbnail_height">140dp</dimen>
 </resources>
